@@ -1,0 +1,31 @@
+.scene-container {
+  min-height: 60vh;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+.scene-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+.scene-content {
+  position: relative;
+  z-index: 1;
+}
+.scene-character {
+  margin: 20px auto;
+}
+.scene-character-img {
+  width: 200px;
+}
+.scene-choice-btn {
+  margin: 5px;
+}

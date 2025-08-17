@@ -1,0 +1,108 @@
+{
+  "stories": [
+    {
+      "id": "parque_espana",
+      "title": "A Walk in Parque Espana",
+      "scenes": [
+        {
+          "id": "scene_1",
+          "background": "background_park_opening.png",
+          "text": "You're on a walk in a Parque Espana",
+          "choices": [{"text": "Sit on a bench", "nextScene": "scene_2"}]
+        },
+        {
+          "id": "scene_2",
+          "background": "background_park_with_woman.png",
+          "text": "You decide to sit down on a nearby bench",
+          "choices": [{"text": "Look around", "nextScene": "scene_3"}]
+        },
+        {
+          "id": "scene_3",
+          "character": {
+            "name": "Woman",
+            "sprite": "woman_spanish.png",
+            "position": "right"
+          },
+          "text": "Right as you do, you notice a woman sitting near you",
+          "choices": [{"text": "Say hello", "nextScene": "scene_4"}]
+        },
+        {
+          "id": "scene_4",
+          "background": "bench.png",
+          "character": {
+            "name": "Woman",
+            "sprite": "woman_spanish_talking.png",
+            "position": "right"
+          },
+          "text": "She turns to speak to you",
+          "dialogue": [
+            {
+              "speaker": "Woman",
+              "text": "Can I ask you a favor?",
+              "responses": [
+                {"text": "Sure!", "nextScene": "scene_5"},
+                {"text": "Maybe later", "nextScene": "scene_mad_end"},
+                {"text": "What's up?", "nextScene": "scene_5"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scene_5",
+          "background": "bench.png",
+          "character": {
+            "name": "Woman",
+            "sprite": "woman_spanish_talking_2.png",
+            "position": "right"
+          },
+          "text": "She turns to speak to you",
+          "dialogue": [
+            {
+              "speaker": "Woman",
+              "text": "Can you help me find my dog? I lost him somewhere around here earlier and I'm starting to worry.",
+              "responses": [
+                {"text": "Yeah definitely!", "nextScene": "scene_6"},
+                {"text": "Sorry, not interested", "nextScene": "scene_mad_end"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scene_6",
+          "background": "bench.png",
+          "character": {
+            "name": "Woman",
+            "sprite": "woman_spanish_excited.png",
+            "position": "right"
+          },
+          "dialogue": [
+            {
+              "speaker": "Woman",
+              "text": "Perfect, that would be great!?",
+              "responses": [
+                {"text": "Where did you last leave him?", "nextScene": "scene_7"}
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scene_mad_end",
+          "background": "bench.png",
+          "character": {
+            "name": "Woman",
+            "sprite": "woman_spanish_mad.png",
+            "position": "right"
+          },
+          "text": "She looks disappointed in you.",
+          "choices": [{"text": "Try again", "nextScene": "scene_1"}],
+          "dialogue": [
+            {
+              "speaker": "Woman",
+              "text": "What's wrong with you? I just wanted some help finding my dog."
+            }
+          ]
+        }   
+      ]
+    }
+  ]
+}
